@@ -50,11 +50,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$primary-color: #0c7cec;
+$default-color: black;
 div{
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 80%;
+    height: auto;
     margin: 0 auto;
     
     img{
@@ -70,10 +73,17 @@ div{
 
             a{
                 text-decoration: none;
-                padding: 1rem;
+                margin: 0 1rem;
+                padding-bottom: 25px;
                 text-transform: uppercase;
                 font-size: 0.60rem;
                 font-weight: 700;
+                color: $default-color;
+
+                &:hover{
+                    color: $primary-color;
+                    border-bottom: 4px solid $primary-color;
+                }
             }
         }
     }
