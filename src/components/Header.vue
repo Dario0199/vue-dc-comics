@@ -6,35 +6,8 @@
             </a>
             <nav>
                 <ul>
-                    <li>
-                        <a href="/">character</a>
-                    </li>
-                    <li>
-                        <a href="/">comics</a>
-                    </li>
-                    <li>
-                        <a href="/">movie</a>
-                    </li>
-                    <li>
-                        <a href="/">tv</a>
-                    </li>
-                    <li>
-                        <a href="/">games</a>
-                    </li>
-                    <li>
-                        <a href="/">collectibles</a>
-                    </li>
-                    <li>
-                        <a href="/">videos</a>
-                    </li>
-                    <li>
-                        <a href="/">fans</a>
-                    </li>
-                    <li>
-                        <a href="/">news</a>
-                    </li>
-                    <li>
-                        <a href="/">shop</a>
+                    <li v-for="(link, index) in menuLink" :key="`link-${index}`">
+                        <a :class="{active: link.current}" :href="link.url">{{ link.text }}</a>
                     </li>
                 </ul>
             </nav>
@@ -46,6 +19,62 @@
 <script>
 export default {
     name: 'header',
+    data() {
+        return{
+            menuLink: [
+                {
+                    text: 'character',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'comics',
+                    url: '/',
+                    current: true
+                },
+                {
+                    text: 'movie',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'tv',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'games',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'collectibles',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'videos',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'fans',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'news',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'shop',
+                    url: '/',
+                    current: false
+                },
+            ],
+        }
+    },
 }
 </script>
 
@@ -79,7 +108,7 @@ div{
                 font-size: 0.60rem;
                 font-weight: 700;
                 color: $default-color;
-
+                &.active,
                 &:hover{
                     color: $primary-color;
                     border-bottom: 4px solid $primary-color;

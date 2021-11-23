@@ -238,6 +238,7 @@ export default {
 
                         h2{
                             text-transform: uppercase;
+                            color: #0c7cec;
                         }
                     }
                 }
