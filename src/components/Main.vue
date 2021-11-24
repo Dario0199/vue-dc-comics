@@ -5,8 +5,10 @@
             <ul>
                 <li v-for="(comics, index) in comicsList" :key="`comics-${index}`">
                     <div class="card">
-                        <img :src="comics.thumb" :alt="comics.series">
-                        <p>{{ comics.series }}</p>
+                        <!-- <img :src="comics.thumb" :alt="comics.series">
+                        <p>{{ comics.series }}</p> -->
+
+                        <Cards :url="comics.thumb" :title="comics.series"/>
                     </div>
                 </li>
             </ul>
@@ -15,8 +17,13 @@
 </template>
 
 <script>
+import Cards from '@/components/Cards.vue';
+
 export default {
     name: 'Main',
+    components: {
+        Cards,
+    },
     data() {
         return {
             comicsList: [
@@ -131,6 +138,7 @@ section{
                     width: 100%;
                     height: 200px;
                     object-fit: cover;
+                    object-position: top;
                 }
                 }
             }
