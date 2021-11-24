@@ -208,7 +208,7 @@ export default {
                 }
         }
         .contact{
-            background: black;
+            background: rgb(41, 41, 41);
             padding: 50px 0;
             
             .footer-bar{
@@ -218,7 +218,7 @@ export default {
 
                 button{
                     padding: 15px;
-                    background: black;
+                    background: rgb(41, 41, 41);
                     color: white;
                     border: 3px solid #0c7cec;
                     text-transform: uppercase;
