@@ -222,6 +222,9 @@ export default {
                     color: white;
                     border: 3px solid #0c7cec;
                     text-transform: uppercase;
+                    &:hover{
+                        background: #0c7cec;
+                    }
                 }
 
                 .social{

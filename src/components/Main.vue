@@ -1,7 +1,6 @@
 <template>
     <section>
         <div class="container">
-            
             <ul>
                 <li v-for="(comics, index) in comicsList" :key="`comics-${index}`">
                     <div class="card">
@@ -118,10 +117,6 @@ section{
         color: white;
         padding: 40px 0;
 
-        h1{
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
         ul{
             display: flex;
             flex-wrap: wrap;
@@ -132,14 +127,7 @@ section{
                 margin-bottom: 2rem;
 
                 .card{
-                    padding: 6px;
-
-                    img{
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                    object-position: top;
-                }
+                    padding: 6px;                    
                 }
             }
         }
